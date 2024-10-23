@@ -1,0 +1,148 @@
+/* Estilo para o layout da página */
+html, body {
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  background-color: #000; /* Fundo preto */
+  color: #fff;
+  font-family: Arial, sans-serif;
+  overflow-x: hidden; /* Impede rolagem horizontal */
+}
+
+/* Header com imagem principal */
+.header-image {
+  width: 100%;
+  height: 50vh; /* Altura de 50% da tela para a imagem do topo */
+  background-image: url('caminho-para-imagem.jpg'); /* Substitua pelo caminho da sua imagem */
+  background-size: cover;
+  background-position: center;
+  margin-bottom: 2rem; /* Espaço abaixo da imagem */
+}
+
+/* Cards de produtos */
+.product-card {
+  background-color: #222; /* Fundo escuro dos cards */
+  border: none;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  margin-bottom: 2rem; /* Espaçamento entre os cards */
+  padding: 10px;
+  border-radius: 10px; /* Bordas arredondadas */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra suave */
+  height: auto; /* Ajustado para permitir mais conteúdo */
+}
+
+/* Imagem dos produtos */
+.img-product {
+  width: 100%;
+  height: 40vh; /* Altura ajustada para imagens menores */
+  object-fit: cover; /* Imagem cobre o espaço sem distorção */
+  border-radius: 10px 10px 0 0; /* Bordas arredondadas no topo */
+}
+
+/* Corpo do card */
+.card-body {
+  text-align: center;
+  padding: 20px;
+}
+
+/* Título do produto */
+.card-title {
+  font-size: 1.75rem;
+  color: #f8c102; /* Cor dourada para destaque */
+  margin-bottom: 1rem;
+}
+
+/* Texto descritivo do produto */
+.card-text {
+  font-size: 1rem;
+  color: #ddd;
+  margin-bottom: 1.5rem;
+}
+
+/* Botões personalizados */
+.btn-custom {
+  background-color: #28a745; /* Cor verde */
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+  border-radius: 5px;
+  margin-right: 10px;
+  width: 120px;
+}
+
+.btn-custom:hover {
+  background-color: #218838; /* Cor mais escura ao passar o mouse */
+}
+
+.btn-link {
+  color: #007bff;
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+.btn-link:hover {
+  text-decoration: underline;
+  color: #0056b3;
+}
+
+/* Estilo do Navbar */
+.navbar {
+  background-color: #333; /* Cor da navbar */
+  padding: 15px 30px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra na navbar */
+}
+
+.navbar-brand {
+  font-weight: bold;
+  font-size: 1.75rem;
+  color: #f8c102; /* Dourado */
+}
+
+.nav-link {
+  font-size: 18px;
+  color: #fff;
+  margin-left: 15px;
+}
+
+.nav-link:hover {
+  color: #f8c102; /* Dourado ao passar o mouse */
+}
+
+/* Rodapé */
+footer {
+  background-color: #333; /* Fundo escuro */
+  padding: 20px;
+  text-align: center;
+  position: relative; /* Alterado para ser posicionado após o conteúdo */
+  width: 100%;
+  bottom: 0;
+  color: #fff;
+  font-size: 14px;
+}
+
+/* Responsividade */
+@media (max-width: 768px) {
+  .product-card {
+      height: auto; /* Altura ajustada para mobile */
+  }
+
+  .img-product {
+      height: auto; /* Altura ajustada para mobile */
+  }
+
+  .card-body {
+      padding: 10px;
+  }
+
+  .navbar-brand {
+      font-size: 1.5rem;
+  }
+
+  .nav-link {
+      font-size: 16px;
+  }
+}

@@ -1,0 +1,297 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Produtos - Na Chapa Hamburgueria</title>
+  
+  <!-- Bootstrap CSS -->
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  
+  <style>
+    /* Fundo preto e cor de texto branca */
+    body, html {
+      background-color: #000;
+      color: #fff;
+      height: 100%;
+      margin: 0;
+      display: flex;
+      flex-direction: column;
+    }
+    
+    /* Estilo da Navbar */
+    .navbar {
+      background-color: #333;
+      padding: 15px 30px;
+    }
+    .navbar-brand {
+      color: #fff;
+      font-size: 1.75rem;
+      font-weight: bold;
+    }
+    .navbar-nav .nav-link {
+      color: #fff;
+      padding-left: 20px;
+    }
+    .navbar-toggler {
+      background-color: #fff;
+    }
+    .navbar-toggler-icon {
+      background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3E%3Cpath stroke='rgba%28 255, 255, 255, 1%29' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E");
+    }
+    .navbar-nav .nav-link:hover {
+      color: #f8c102;
+    }
+    
+    /* Seção de imagem de cabeçalho */
+    .header-image {
+      width: 100%;
+      height: 50vh; /* Altura de 50% da tela */
+      background-image: url('IMG/header.jpg'); /* Substitua pelo caminho da sua imagem */
+      background-size: cover;
+      background-position: center;
+      margin-bottom: 2rem;
+    }
+
+    /* Ajuste da seção de produtos */
+    .container-fluid {
+      flex: 1;
+    }
+
+    h1 {
+      margin-bottom: 2rem;
+      font-size: 2.5rem;
+      font-weight: bold;
+      color: #f8c102;
+    }
+
+    /* Cards de produtos */
+    .product-card {
+      background-color: #222;
+      border: none;
+      margin-bottom: 2rem;
+    }
+
+    .card-body {
+      text-align: center;
+    }
+
+    .card-title {
+      font-size: 1.5rem;
+      font-weight: bold;
+      color: #f8c102;
+    }
+
+    .card-text {
+      font-size: 1rem;
+      color: #ddd;
+    }
+
+    .img-product {
+      width: 100%;
+      height: 400px;
+      object-fit: cover;
+    }
+
+    .btn-custom {
+      background-color: #f8c102;
+      color: white;
+      margin-right: 10px;
+      width: 120px;
+    }
+
+    .btn-link {
+      color: #fff;
+    }
+
+    .btn-link:hover {
+      color: #f8c102;
+    }
+
+    /* Modal */
+    .modal-content {
+      background-color: #333;
+      color: #fff;
+    }
+
+    /* Rodapé fixado no final da página */
+    footer {
+      background-color: #333;
+      color: #fff;
+      padding: 15px;
+      text-align: center;
+      position: relative;
+      bottom: 0;
+      width: 100%;
+    }
+
+    /* Responsividade para mobile */
+    @media (max-width: 768px) {
+      .navbar-brand {
+        font-size: 1.5rem;
+      }
+
+      .card-title {
+        font-size: 1.25rem;
+      }
+
+      .img-product {
+        height: 300px;
+      }
+
+      h1 {
+        font-size: 2rem;
+      }
+
+      footer {
+        font-size: 0.9rem;
+      }
+    }
+  </style>
+</head>
+<body>
+
+  <!-- Navbar -->
+  <nav class="navbar navbar-expand-lg">
+    <a class="navbar-brand" href="#">Na Chapa Hamburgueria</a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarNav">
+      <ul class="navbar-nav ml-auto">
+        <li class="nav-item">
+          <a class="nav-link" href="index.html">Home</a>
+        </li>
+        <li class="nav-item active">
+          <a class="nav-link" href="produtos.html">Produtos</a>
+        </li>  
+        <li class="nav-item">
+          <a class="nav-link" href="sobre.html">Quem Somos</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link" href="contato.html">Contato</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <!-- Imagem de Cabeçalho -->
+  <div class="header-image"></div>
+
+  <!-- Seção de Produtos -->
+  <div class="container-fluid">
+    <h1 class="text-center">Nossos Produtos</h1>
+    <div class="row justify-content-center">
+      <!-- Produto 1 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="IMG/img1.jpg" class="card-img-top img-product" alt="Hambúrguer Clássico">
+          <div class="card-body">
+            <h5 class="card-title">Hambúrguer Clássico</h5>
+            <p class="card-text">Um delicioso hambúrguer com carne suculenta, queijo, alface e tomate.</p>
+            <button class="btn btn-custom">Comprar</button>
+            <button class="btn btn-link" data-toggle="modal" data-target="#modalProduto1">Saiba Mais</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Produto 1 -->
+      <div class="modal fade" id="modalProduto1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Hambúrguer Clássico</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Um delicioso hambúrguer com carne suculenta, queijo, alface e tomate. Perfeito para quem ama o tradicional!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto 2 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="IMG/img2.webp" class="card-img-top img-product" alt="Hambúrguer Gourmet">
+          <div class="card-body">
+            <h5 class="card-title">Hambúrguer Gourmet</h5>
+            <p class="card-text">Hambúrguer premium com ingredientes selecionados e sabor inigualável.</p>
+            <button class="btn btn-custom">Comprar</button>
+            <button class="btn btn-link" data-toggle="modal" data-target="#modalProduto2">Saiba Mais</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Produto 2 -->
+      <div class="modal fade" id="modalProduto2" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Hambúrguer Gourmet</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Hambúrguer premium com ingredientes selecionados, ideal para os amantes de sabores refinados!
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Produto 3 -->
+      <div class="col-md-4">
+        <div class="card product-card">
+          <img src="IMG/img3.jpg" class="card-img-top img-product" alt="Combo AVALANCHE">
+          <div class="card-body">
+            <h5 class="card-title">Combo AVALANCHE</h5>
+            <p class="card-text">Sabor surpreendente com batatas e um molho de alho perfeito!</p>
+            <button class="btn btn-custom">Comprar</button>
+            <button class="btn btn-link" data-toggle="modal" data-target="#modalProduto3">Saiba Mais</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- Modal Produto 3 -->
+      <div class="modal fade" id="modalProduto3" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+          <div class="modal-content">
+            <div class="modal-header">
+              <h5 class="modal-title" id="exampleModalLabel">Combo AVALANCHE</h5>
+              <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+              </button>
+            </div>
+            <div class="modal-body">
+              Combo completo com hambúrguer, batatas fritas e um incrível molho de alho.
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-dismiss="modal">Fechar</button>
+            </div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+
+  <!-- Rodapé -->
+  <footer>
+    <p>&copy; 2024 Na Chapa Hamburgueria. Todos os direitos reservados.</p>
+  </footer>
+
+  <!-- jQuery, Popper.js e Bootstrap JS -->
+  <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.2/dist/umd/popper.min.js"></script>
+  <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
